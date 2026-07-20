@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="es" class="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "secondary": "#775a19",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#4a0404",
+                        "background": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-secondary-container": "#785a1a",
+                        "on-secondary-fixed": "#261900",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "secondary-fixed": "#ffdea5",
+                        "on-surface-variant": "#554240",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-tint": "#9d4139",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#d26a5f",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-container": "#fed488",
+                        "outline-variant": "#dcc0bd",
+                        "inverse-primary": "#ffb4aa",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-container": "#8a8985",
+                        "surface-variant": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-low": "#f6f3f2",
+                        "outline": "#89726f",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-background": "#1c1b1b",
+                        "tertiary-container": "#22221f",
+                        "primary": "#210000",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "on-primary-fixed-variant": "#7e2b23",
+                        "surface-container": "#f0eded",
+                        "tertiary-fixed": "#e5e2dd",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed": "#410001",
+                        "primary-fixed": "#ffdad5",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "tertiary": "#0b0c09"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-md": ["Manrope"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20 transition-all duration-200 ease-in-out sticky">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="font-headline-md text-headline-md text-primary italic">Gabriela's Flowers</div>
+<div class="hidden md:flex gap-8">
+<a href="#" class="font-label-lg text-label-lg uppercase tracking-widest text-secondary border-b-2 border-secondary pb-1 transition-colors duration-300">Inicio</a>
+<a href="#" class="font-label-lg text-label-lg uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300">Productos</a>
+<a href="#" class="font-label-lg text-label-lg uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300">Fechas Especiales</a>
+<a href="#" class="font-label-lg text-label-lg uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300">Dedicatorias</a>
+<a href="#" class="font-label-lg text-label-lg uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:text-secondary transition-colors duration-300">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-primary py-section-gap overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-center bg-cover mix-blend-overlay" data-alt="A luxurious, high-end close-up photograph of deep red velvet roses with crystalline water droplets, captured in moody, cinematic lighting that highlights the delicate textures of the petals against a dark, elegant background. The aesthetic is sophisticated and romantic, using deep vinotinto and subtle golden light to evoke a sense of premium floral artistry." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApX_cqmT72z-AF-BeEujUTchmAZ7QhF773FRKP7cLBebhAYdiPhMP-3kUZI6nNfO0JMlMVMMhXCsmcuWaB15t6H76E7NsjzJ3jTNStd29zEPEaPbOd-1ZZC5ohF2aVSSkcIsA4WUsESDJ11HWtYLE_g2M5xvqJ9fD8xbNEUDobPc6d3wCmut1dz54Tx27ZLWtBmViwmlxT96zb5iIQN7qVt1qDzasEMoLEsbwiClayOByAv_LRZbGbd-jJEPpTK7SOugskBf29Jaud')"></div>
+<div class="relative max-w-container-max mx-auto px-margin-desktop text-center space-y-8">
+<h1 class="font-display-lg text-display-lg text-white leading-tight">
+                    Detalles que enamoran🌹✨
+                </h1>
+<div class="space-y-4">
+<p class="font-headline-sm text-headline-sm text-secondary-fixed max-w-2xl mx-auto">
+                        Hablamos español | Tienda virtual👩🏻‍💻 | Delivery disponible 🚘
+                    </p>
+<div class="flex justify-center gap-4 pt-8">
+<button class="bg-secondary text-white px-8 py-4 font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary-fixed-dim transition-colors duration-300 shadow-lg">
+                            Ver Colección
+                        </button>
+<button class="border border-white text-white px-8 py-4 font-label-lg text-label-lg uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
+                            Personalizar
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Advertising-->
+<section class="w-full">
+<div class="w-full h-[500px] bg-center bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyEiwokXwvYMWazgrvtFcoua1PvPyXxP4lCPjBdjzOtXj3h1ubgu6LC8e66Km0NKsZYeuWvNfZYIUunXoDb6sdIFm9hSnJBLgqGV54LvnDKozeQjVVGcPu6UeWxBUS4tmOyq63Tx_5yinyLsm9wj23BVsIs0En9KeBmUGL495Z8nDtO9TJZOzu31gSTC2wVN_sD5Rt9RlrWFMK5T3HvBG8oY_x0nKzY3QSy0X3giq5NLeuBGh2UifU_w_fClUEuG-HKz_1-Zkvaff6')"></div>
+</section>
+<!-- Product Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Nuestros Arreglos</h2>
+<p class="font-body-lg text-body-lg text-outline max-w-xl mx-auto">Elegancia y frescura en cada pétalo. Diseñados para cautivar en cualquier ocasión.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest luxury-shadow luxury-shadow-hover transition-all duration-300 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white p-4">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgCdECgVAAB00Fy15lRHinuVC0OVRplGQMdQQxRxI-x0pAPZWOn3aLpldB_Rc1WFRuI4fMWNk_OIwuKnssAmikdbkff1cpI-N7BpboCsYmfFpzj9UDt26jOY5M4mG06mvcISQEbTD4PRxnjJPmH41pVDShNgAapH1f5V-ODOaX3wdy57Y_ik_4y9l4XM8TvxVMUEB4FqFpfOPhCge607pQsIYgoAOZ4CRf_T90y-OUTnMm0miYop3lzKcTXGQJY2prmWmb8Oauzc4V">
+</div>
+<div class="p-6 text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Pasión Roja</h3>
+<p class="font-body-lg text-body-lg text-secondary font-semibold">Desde $40</p>
+<button class="mt-4 w-full border border-primary text-primary py-2 font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Añadir al Carrito</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest luxury-shadow luxury-shadow-hover transition-all duration-300 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white p-4">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ1hd_gb5Z4_FPPpbb0gVcRtpbEMcH4UNQLSQMwIuA_lu9WkO-Ko6BFnpG2jQs8hXhKOtRYS-KeLH-adEw4XD4NGJHNA7mosGkQkbBaJp2LGCO6SdnVMMji3Ysz6nvGu4PdS4pynUmIpxiZrrhG9BV2qLHKxvjpeoDXUFImY9DEO5-5qLY9qjwibwmkSa5ZcFoUagvtsHdFEvUVpWsYwgHJm_Y1ZJf-6vCGfsY5n9YfYnYW5XABGgAf6BvydkUvzRyUx1fj_afbmls">
+</div>
+<div class="p-6 text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Elegancia Blanca</h3>
+<p class="font-body-lg text-body-lg text-secondary font-semibold">Desde $55</p>
+<button class="mt-4 w-full border border-primary text-primary py-2 font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Añadir al Carrito</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest luxury-shadow luxury-shadow-hover transition-all duration-300 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white p-4">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHf0Q2WUsnETPjgnjWcB8KWEeTEzm2XS4LTWZ3yycyB2377wMDGFxblPhERS6BAGO-czrrwlWS69Qoghp1jENMpUhnpHZX7JULcLhaxdev4RAd1GVWnzacs-cXUNgPY3jL-z_nXTxFaVo5ns2NpAo0tiV1dzcgVngjqKDNINLPIVTXrF8ZPptA1XBtpG9xo9Atri8jMN41OIZeIaGmmIRxB7D_eSA3F7XLNdcCDR0QiO-SlB4AQIomuxC8GIQOgGFIKe99sNLqcsvl">
+</div>
+<div class="p-6 text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Corazón de Oro</h3>
+<p class="font-body-lg text-body-lg text-secondary font-semibold">Desde $45</p>
+<button class="mt-4 w-full border border-primary text-primary py-2 font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Añadir al Carrito</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest luxury-shadow luxury-shadow-hover transition-all duration-300 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white p-4">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOvRZ2WrU7_V_czKF0LUQfARQnvuhjWRMuD2S_ozWa-cSIUdJj9297J8n2Gw_sMNgbxIh2fyoLSe-VH54ojIrBBnGMkXacDEQKjVM7NyiXrrtAZI0knvvpkFnkYy0nhebnaHXLqf8ToCCfZf-RpK20IsRTr166EfzVCq2EsGd9t2t6pcDDcx1c0HLyCEknFAFapNXmeSqwhoVUsqcyZYk9MqDOmVM2n74qpiHsMoTs8HL56SAdHYIOBSaKu6T7fkaeBWJi67Y7HZJ_">
+</div>
+<div class="p-6 text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Dulce Encanto</h3>
+<p class="font-body-lg text-body-lg text-secondary font-semibold">Desde $40</p>
+<button class="mt-4 w-full border border-primary text-primary py-2 font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Añadir al Carrito</button>
+</div>
+</div>
+</div>
+<!-- Second row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mt-gutter">
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest luxury-shadow luxury-shadow-hover transition-all duration-300 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white p-4">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQE8t9iwzJoPnQYz_58YYqa4eBoQ8emJ3Vl6iTw7wDWzSnSWUaHScz6WrhP533wjviqjosSKBRzBeqgwJlE40Wse42-68kNz_FxYF3JtAIcvuze47iSfDwjP4Fc6aVJiTuPjU1SrCV-xSMT8X5UgEUFF--z_W_ZA7JGcWDysQ5plskOnjAbCQDRvxuD-okQWLjtX2GxrBXRyx-vfv0wv83zQi5r4TYG5V7TEAggkIWrFH6QaVpfilWRIKyPsLkdDaLVYxNpBOgJaUP">
+</div>
+<div class="p-6 text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Ramo de Gala</h3>
+<p class="font-body-lg text-body-lg text-secondary font-semibold">Desde $70</p>
+<button class="mt-4 w-full border border-primary text-primary py-2 font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Añadir al Carrito</button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface-container-lowest luxury-shadow luxury-shadow-hover transition-all duration-300 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white p-4">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj4PIJGdL1pA7dshmnZCYoMT1DKgPGnY9a9oZEouMgIN0CmMVkGj0MOEA33T9DYiGjF5L_jz9QIWshjPPvLB3lIbRc4VARUwDOj74EjLxj5z1OQToR1683Fxte7muIDvj64GvNbhNjuI6GnSTbERLuFU_TrCFw6XdwIEFfnP446qJXI9FfEiO3J0wVofPyV6ccs520XwOw9ntx9d0DWv7-LXwEVrLsBZ0CC-7bB3X3EjNyo8GYsHGlqIl3yOTMxSKltp63KQZiHShW">
+</div>
+<div class="p-6 text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Especial de Temporada</h3>
+<p class="font-body-lg text-body-lg text-secondary font-semibold">Desde $40</p>
+<button class="mt-4 w-full border border-primary text-primary py-2 font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">Añadir al Carrito</button>
+</div>
+</div>
+<!-- Bento Action Card -->
+<div class="bg-primary flex flex-col justify-center items-center text-center p-12 text-white relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 group-hover:scale-110 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQE8t9iwzJoPnQYz_58YYqa4eBoQ8emJ3Vl6iTw7wDWzSnSWUaHScz6WrhP533wjviqjosSKBRzBeqgwJlE40Wse42-68kNz_FxYF3JtAIcvuze47iSfDwjP4Fc6aVJiTuPjU1SrCV-xSMT8X5UgEUFF--z_W_ZA7JGcWDysQ5plskOnjAbCQDRvxuD-okQWLjtX2GxrBXRyx-vfv0wv83zQi5r4TYG5V7TEAggkIWrFH6QaVpfilWRIKyPsLkdDaLVYxNpBOgJaUP'); background-size: cover;"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-4 italic">¿Algo especial?</h3>
+<p class="font-body-md text-body-md mb-8 opacity-80">Diseñamos arreglos personalizados que cuentan tu historia.</p>
+<a class="inline-block bg-secondary px-8 py-3 font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary-fixed transition-colors" href="#">Contactar</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 italic">Lo que dicen nuestros clientes</h2>
+<div class="w-24 h-px bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center space-y-6">
+<div class="text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg italic text-on-surface">"El servicio de entrega fue impecable y las flores llegaron más frescas de lo que imaginaba. Un detalle realmente premium."</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-primary">— Maria Elena V.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg italic text-on-surface">"Compré un arreglo para mi aniversario y mi esposa quedó encantada. La presentación en la caja negra es de otro nivel."</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-primary">— Carlos R.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg italic text-on-surface">"Gabriela's Flowers es mi opción segura. Siempre puntuales y con la mejor calidad en rosas de todo Houston."</p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-primary">— Sofia L.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Contact -->
+<section class="bg-primary py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="text-white space-y-6">
+<h2 class="font-headline-lg text-headline-lg">Únete a nuestra lista exclusiva</h2>
+<p class="font-body-lg text-body-lg opacity-80">Recibe noticias sobre nuestras colecciones de temporada y ofertas exclusivas directamente en tu correo.</p>
+<form class="flex gap-4">
+<input class="bg-transparent border-b border-white py-3 flex-grow focus:outline-none focus:border-secondary transition-colors text-white placeholder-white/50" placeholder="Tu correo electrónico" type="email">
+<button class="bg-white text-primary px-8 py-3 font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary hover:text-white transition-all">Suscribirme</button>
+</form>
+</div>
+<div class="bg-surface-container-highest p-12 text-primary space-y-8 luxury-shadow">
+<h3 class="font-headline-md text-headline-md italic">¿Necesitas ayuda?</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">phone</span>
+<span class="font-body-lg text-body-lg">832 391 1835</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="font-body-lg text-body-lg">contacto@gabrielasflowers.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="font-body-lg text-body-lg">Houston, TX &amp; Alrededores</span>
+</div>
+</div>
+<div class="flex gap-6 pt-4">
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">share</span> Instagram</a>
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">facebook</span> Facebook</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary-container w-full py-section-gap px-margin-desktop flex flex-col items-center gap-unit text-center">
+<div class="font-headline-sm text-headline-sm text-secondary-fixed mb-6">Gabriela's Flowers</div>
+<div class="flex gap-8 mb-8">
+<span class="text-secondary-fixed/80 font-body-md text-body-md hover:text-white transition-opacity cursor-pointer">WhatsApp</span>
+<span class="text-secondary-fixed/80 font-body-md text-body-md hover:text-white transition-opacity cursor-pointer">Visa</span>
+<span class="text-secondary-fixed/80 font-body-md text-body-md hover:text-white transition-opacity cursor-pointer">Mastercard</span>
+<span class="text-secondary-fixed/80 font-body-md text-body-md hover:text-white transition-opacity cursor-pointer">PayPal</span>
+</div>
+<p class="font-body-md text-body-md text-secondary-fixed/80 opacity-90 hover:opacity-100 transition-opacity">
+            © 2024 Gabriela's Flowers. Detalles que enamoran.
+        </p>
+</footer>
+<script>
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+            }
+        });
+    </script>
+
+<a href="#" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer" aria-label="Chat on WhatsApp"><span class="material-symbols-outlined !text-[32px]">chat</span></a></body></html>

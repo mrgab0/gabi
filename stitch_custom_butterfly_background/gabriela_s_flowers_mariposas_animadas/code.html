@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gabriela's Flowers - Detalles que enamoran</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Serif for Headings and Sans for Body -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-burgundy': '#2d0606',
+            'brand-gold': '#8b732d',
+            'brand-bg-light': '#fdfcfb',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="animations">
+    /* Improved Butterfly Floating and Flutter Animation */
+    @keyframes butterfly-flight {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+      25% { transform: translate(20px, -50px) rotate(10deg) scale(1.05); }
+      50% { transform: translate(-10px, -100px) rotate(-5deg) scale(0.95); }
+      75% { transform: translate(30px, -150px) rotate(15deg) scale(1.05); }
+      100% { transform: translate(0, -200px) rotate(0deg) scale(1); }
+    }
+
+    @keyframes butterfly-opacity {
+      0%, 100% { opacity: 0; }
+      10%, 90% { opacity: 0.35; }
+    }
+
+    @keyframes wing-flutter {
+      0%, 100% { filter: brightness(1.2) contrast(1.1); }
+      50% { filter: brightness(1.5) contrast(0.9); }
+    }
+
+    .butterfly {
+      position: fixed;
+      pointer-events: none;
+      z-index: 5; /* Lowered z-index to ensure it's behind most content */
+      width: 40px;
+      height: auto;
+      will-change: transform, opacity;
+    }
+
+    .butterfly-anim {
+      animation: 
+        butterfly-flight 18s ease-in-out infinite,
+        butterfly-opacity 18s ease-in-out infinite,
+        wing-flutter 0.2s ease-in-out infinite;
+    }
+  </style>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #fdfcfb;
+      overflow-x: hidden;
+    }
+    .product-card {
+      transition: transform 0.3s ease;
+    }
+    .hero-gradient {
+      background: linear-gradient(rgba(45, 6, 6, 0.7), rgba(45, 6, 6, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTU963wMoc-KdDx6QN631VTqh2wRcDvQdmh2ftKBDtNaiHyzfnOTnCnl2LSyS7QNiOLwn1uBjzbkTHFGPOY5DU_w0JuiQCryxuv_vk2rCY7dq9ACEchAz7FtcULQZRySoAFrIIgqzr328B-1T1kRq7jh8JTrJjjm-WGvOvUeY92f7CYFmCq5QtLHFpxHy1efcYpeVt4vdHLtaHfajmbJkajJYGCAQft0xQx4Mh9Wc71VkEo3xxfjGpfdLTnBPU9CaQ7zjxGf52ONE');
+      background-size: cover;
+      background-position: center 20%;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+<!-- BEGIN: Navigation -->
+<nav class="bg-white border-b border-gray-100 py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+<h1 class="font-serif text-xl italic font-bold">Gabriela's Flowers</h1>
+<div class="flex items-center space-x-4">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Hero Section -->
+<header class="bg-brand-burgundy text-white text-center py-16 px-6 relative overflow-hidden hero-gradient">
+<div class="relative z-20">
+<h2 class="font-serif text-4xl mb-4 italic">Detalles que enamoran 🌹✨</h2>
+<p class="text-sm font-medium mb-8 tracking-wide">Hablamos español | Tienda virtual 👩‍💻 | Delivery disponible 🚘</p>
+<div class="flex flex-col gap-3 max-w-xs mx-auto">
+<button class="bg-brand-gold text-white py-3 px-6 uppercase text-xs tracking-widest font-bold">Ver Colección</button>
+<button class="border border-white text-white py-3 px-6 uppercase text-xs tracking-widest font-bold">Personalizar</button>
+</div>
+</div>
+</header>
+<!-- END: Hero Section -->
+<!-- Butterfly Elements Container -->
+<div id="butterfly-container">
+<img alt="butterfly" class="butterfly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGyum3HAqyFMJfx_QYu1IYY8XhIiQO817qenMu44wYi-E-nVbuRSoFYRmcbbXfcmoYtN_IU1lbNddLdS8FKzKLYC7kyLydkcnSz2JcqF5uhP4KZGovGeAWq1ACSa6ppu5wWSTEJ65E2jD7PlKwJxCjUembI3ylpEVbCIXDMet52AIkiL6w1rs48ws7z4ob-njpG2cRdL90mOVVXTOEVpPfqQD40umMbzfVeTAm--Sqa0EPRbSefX8kUqQjngcRkOulGdf0aTcTm4o"/>
+<img alt="butterfly" class="butterfly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbwkSWMuzaKxsxjswRbd7HuzyFSG6KW4mwk-tBFS_Bq3sQT_zWE2Rw5p_KcUjNRKqYVhv88ISUiohZUeD62BefFy2twV7fdpzhBonEkQ57J1CEhvrNKLb72mV3FKtvS6lIHM07ijvhOXqmcVjOfqn69OQwgrgRhrLbyxwav6fFra-fJ70iP6xrVYDGz4BI256Ad13r5ZhlMpseddC89zUDmSo2lqDCmIOC0tADusWpjlefdmTP56aWG9o3W-qvnr7Ocs7lm9fGEgk"/>
+<img alt="butterfly" class="butterfly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt3_jrV8QyfJknAVhkcns4jdvUSNmGo8skbGWA1toJ7zfT6EiWaUFLMFXHPjFrhSN2hmN6MUDncN9WZ9ElrIU98vsOooCv_M58H_VEkNhrAeP4UCvHzVD4NZ6cbHAMfCD-ANvUJYMJ58uZqrFFP2GPmTxJ-uKwUnl4DIZv25hJUDPWdru2KWPYpovBjBOK5aRAtn_-fhikaH6EmqLFV5bhijNYptLDpHCNsK26rIJG2EIEpyoBhhIqO4Aeja85Eq79OiDOce2S8Lc"/>
+<img alt="butterfly" class="butterfly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm2tRDS-dG3KUH0IcwFyx8xW-3avgORr6YsWU-NxT769-48g2ZHfEE95uHPkDLsxAg2RAIaP8yQHDx9LcZ3IuWpDApBp2AU0_MJorlV5u6a5yEIg_J6ilNj3ioAxifp1ZOfcIydeEnnREVInN_xRx22xa6AD7ZNF_xb7cejcC0DkXR0CNvz3MrwvAOB2gYln2FppnZQc_H7eDSjMDep6pgpiVsVC2uwTphIYFk1HWNT7JMxdQdLFWBbi2e_OJYPaXiMuX4YvXmY80"/>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const butterflies = document.querySelectorAll('.butterfly');
+    const sources = [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDGyum3HAqyFMJfx_QYu1IYY8XhIiQO817qenMu44wYi-E-nVbuRSoFYRmcbbXfcmoYtN_IU1lbNddLdS8FKzKLYC7kyLydkcnSz2JcqF5uhP4KZGovGeAWq1ACSa6ppu5wWSTEJ65E2jD7PlKwJxCjUembI3ylpEVbCIXDMet52AIkiL6w1rs48ws7z4ob-njpG2cRdL90mOVVXTOEVpPfqQD40umMbzfVeTAm--Sqa0EPRbSefX8kUqQjngcRkOulGdf0aTcTm4o',
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBbwkSWMuzaKxsxjswRbd7HuzyFSG6KW4mwk-tBFS_Bq3sQT_zWE2Rw5p_KcUjNRKqYVhv88ISUiohZUeD62BefFy2twV7fdpzhBonEkQ57J1CEhvrNKLb72mV3FKtvS6lIHM07ijvhOXqmcVjOfqn69OQwgrgRhrLbyxwav6fFra-fJ70iP6xrVYDGz4BI256Ad13r5ZhlMpseddC89zUDmSo2lqDCmIOC0tADusWpjlefdmTP56aWG9o3W-qvnr7Ocs7lm9fGEgk',
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAt3_jrV8QyfJknAVhkcns4jdvUSNmGo8skbGWA1toJ7zfT6EiWaUFLMFXHPjFrhSN2hmN6MUDncN9WZ9ElrIU98vsOooCv_M58H_VEkNhrAeP4UCvHzVD4NZ6cbHAMfCD-ANvUJYMJ58uZqrFFP2GPmTxJ-uKwUnl4DIZv25hJUDPWdru2KWPYpovBjBOK5aRAtn_-fhikaH6EmqLFV5bhijNYptLDpHCNsK26rIJG2EIEpyoBhhIqO4Aeja85Eq79OiDOce2S8Lc',
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCm2tRDS-dG3KUH0IcwFyx8xW-3avgORr6YsWU-NxT769-48g2ZHfEE95uHPkDLsxAg2RAIaP8yQHDx9LcZ3IuWpDApBp2AU0_MJorlV5u6a5yEIg_J6ilNj3ioAxifp1ZOfcIydeEnnREVInN_xRx22xa6AD7ZNF_xb7cejcC0DkXR0CNvz3MrwvAOB2gYln2FppnZQc_H7eDSjMDep6pgpiVsVC2uwTphIYFk1HWNT7JMxdQdLFWBbi2e_OJYPaXiMuX4YvXmY80'
+    ];
+
+    function setupButterfly(el) {
+      const startLeft = Math.random() * 100;
+      const startTop = Math.random() * 80 + 10;
+      const duration = 15 + Math.random() * 15;
+      const delay = Math.random() * -30;
+      const size = 15 + Math.random() * 25;
+
+      el.style.left = `${startLeft}%`;
+      el.style.top = `${startTop}%`;
+      el.style.width = `${size}px`;
+      el.style.animationDuration = `${duration}s, ${duration}s, 0.2s`;
+      el.style.animationDelay = `${delay}s, ${delay}s, 0s`;
+      el.classList.add('butterfly-anim');
+    }
+
+    // Initialize existing
+    butterflies.forEach(setupButterfly);
+
+    // Create 4 more for richness
+    const container = document.getElementById('butterfly-container');
+    for (let i = 0; i < 4; i++) {
+      const b = document.createElement('img');
+      b.src = sources[i % sources.length];
+      b.className = 'butterfly';
+      b.alt = 'butterfly';
+      setupButterfly(b);
+      container.appendChild(b);
+    }
+  });
+</script>
+<!-- BEGIN: Product Grid Title -->
+<section class="py-12 px-6 text-center">
+<h3 class="font-serif text-3xl mb-2">Nuestros Arreglos</h3>
+<p class="text-gray-500 text-sm max-w-xs mx-auto italic">Elegancia y frescura en cada pétalo. Diseñados para cautivar en cualquier ocasión.</p>
+</section>
+<!-- END: Product Grid Title -->
+<!-- BEGIN: Product List -->
+<main class="px-4 pb-16">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Product 1 -->
+<div class="bg-white border p-4 text-center product-card" data-purpose="product-item">
+<img alt="Pasión Roja" class="w-full mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQI_4ZXhQ-XYtUAzUYs4DioElWu14MUCU234M0dVxXhs8qTkjE_64O3uq8TasQrFbswABz23iWucbOs1tWi0ZW9ZSokmb_ADRaPUtQnIpP8n90T9SDs6TUtIVd-o6deeJ6yugBf-ZRMrpHhogGswE0JPJxoS3qAD8tw18N_nj1rE4IMJ_DdD6uTy4WUZI_B0of7t5AjttlulpVRxaZrySTXm0kqTWdIpIzyPS8cTS4OF-XCw8f4ghnpKht-SFjlKXIhXK1tTvqGvQ"/>
+<h4 class="font-serif text-xl mb-1">Pasión Roja</h4>
+<p class="text-gray-500 text-sm mb-4">Desde $40</p>
+<button class="w-full border border-gray-300 py-2 text-xs uppercase tracking-widest text-gray-600">Añadir al carrito</button>
+</div>
+<!-- Product 2 -->
+<div class="bg-white border p-4 text-center product-card" data-purpose="product-item">
+<img alt="Elegancia Blanca" class="w-full mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA57tc1aXraLvKBO_9GOfZNRlMEjI2rpzA9WT-tOf5nfi70nGPmnN_bItNSq3MiEszDLfU8JVatC6hJEE_VS7XdYgms0yMVzASYOdj7xPrH9Ewt9Dzz18cNNYDswXm7ZYY3hKKVi-AkpFiMjLL-6BytrkGcDJn6yVUDUNhJDUXLapYpxafH2rVGKbL8AKGueKizip8JL74ZzsYMteBsIkV_XZc-0NWudszBwFUepZS4TFb5Sd3a2Qr05AhdKocwbNRx0ADLMFzaHJ0"/>
+<h4 class="font-serif text-xl mb-1">Elegancia Blanca</h4>
+<p class="text-gray-500 text-sm mb-4">Desde $55</p>
+<button class="w-full border border-gray-300 py-2 text-xs uppercase tracking-widest text-gray-600">Añadir al carrito</button>
+</div>
+<!-- Product 3 -->
+<div class="bg-white border p-4 text-center product-card" data-purpose="product-item">
+<img alt="Corazón de Oro" class="w-full mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF1Cir3YyMi2J8QMzjPD11oDxN3VSgxXB6dapjM51D01O9V9iLxQFoSziS7FseYVra2hwAqtaK_tdJQn5E_rWpWQZ0X6V5pKQQnIOJf03GjVncFaN2yvTmQn3Gw4iHF2yTbFIGZxoCEOqI3hU32C11eZPaRvp5YgeE5Y-MU6q53jZb_NTW1ANNrESA6K6FiCvFMBPFOewaO7SDRsbYGcqCvj89ObugR4Uzj4g5iuntHKtPf1srdgPGaXbB5vG_ts3d1xWT3TQZai4"/>
+<h4 class="font-serif text-xl mb-1">Corazón de Oro</h4>
+<p class="text-gray-500 text-sm mb-4">Desde $45</p>
+<button class="w-full border border-gray-300 py-2 text-xs uppercase tracking-widest text-gray-600">Añadir al carrito</button>
+</div>
+<!-- Custom CTA Card -->
+<div class="bg-brand-burgundy text-white p-8 text-center flex flex-col justify-center items-center relative overflow-hidden min-h-[350px]">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<!-- Decorative floral background pattern implied from image -->
+<img alt="pattern" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrzcWW2oojQrZW4K4slzSULijIkVPlBrEk4iJgo32-ZiJIoD8PhNjFm6NOP7I_MuFAcY6P_QNNkjoZznS-ynvlHT9Cz8mWMv9tFj2ckQwy22R7nIVlLkhV6nPUrZfJ5gQkscu_Z1o84W_ACcDOe0OYeUZpNjkbnN9BagAhyGrQZDKE-dwsOTZMGyvkLW3c4_ICMF_l3adgBDQUkBZ2IXMfr3LZEpR78J3FniXLXJxFwQSBSklY2T8T-wU9iATBiZ_909ej9wNeRYo"/>
+</div>
+<div class="relative z-10">
+<h4 class="font-serif text-3xl mb-4 italic">¿Algo especial?</h4>
+<p class="text-sm mb-8 px-4 font-light">Diseñamos arreglos personalizados que cuentan tu historia.</p>
+<button class="bg-brand-gold text-white py-3 px-10 uppercase text-xs tracking-widest font-bold">Contactar</button>
+</div>
+</div>
+</div>
+</main>
+<!-- END: Product List -->
+<!-- BEGIN: Testimonials -->
+<section class="bg-brand-bg-light py-16 px-6 border-t border-b">
+<h3 class="font-serif text-2xl text-center mb-12 italic">Lo que dicen nuestros clientes</h3>
+<div class="space-y-12">
+<!-- Testimonial 1 -->
+<div class="text-center max-w-sm mx-auto" data-purpose="testimonial">
+<div class="text-brand-gold mb-4 text-sm tracking-widest">☆☆☆☆☆</div>
+<p class="text-sm italic text-gray-600 mb-4 px-2 leading-relaxed">"El servicio de entrega fue impecable y las flores llegaron más frescas de lo que imaginaba. Un detalle realmente premium."</p>
+<p class="text-[10px] uppercase tracking-widest font-bold">— MARIA ELENA V.</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="text-center max-w-sm mx-auto" data-purpose="testimonial">
+<div class="text-brand-gold mb-4 text-sm tracking-widest">☆☆☆☆☆</div>
+<p class="text-sm italic text-gray-600 mb-4 px-2 leading-relaxed">"Compré un arreglo para mi aniversario y mi esposa quedó encantada. La presentación en la caja negra es de otro nivel."</p>
+<p class="text-[10px] uppercase tracking-widest font-bold">— CARLOS R.</p>
+</div>
+</div>
+</section>
+<!-- END: Testimonials -->
+<!-- BEGIN: Newsletter & Contact -->
+<section class="bg-brand-burgundy text-white py-16 px-6">
+<!-- Newsletter -->
+<div class="mb-16">
+<h3 class="font-serif text-3xl mb-4">Únete a nuestra lista exclusiva</h3>
+<p class="text-gray-300 text-sm mb-8 font-light">Recibe noticias sobre nuestras colecciones de temporada y ofertas exclusivas directamente en tu correo.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-transparent border border-white/30 p-3 text-sm focus:border-brand-gold focus:ring-0" placeholder="Tu correo electrónico" type="email"/>
+<button class="bg-white text-brand-burgundy font-bold uppercase text-xs tracking-widest py-3">Suscribirme</button>
+</form>
+</div>
+<!-- Need Help Box -->
+<div class="bg-gray-200/10 p-8 rounded-sm">
+<h4 class="font-serif text-2xl mb-6 italic">¿Necesitas ayuda?</h4>
+<ul class="space-y-4 text-sm font-light text-gray-300">
+<li class="flex items-center gap-3">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          832 391 1835
+        </li>
+<li class="flex items-center gap-3">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          contacto@gabrielasflowers.com
+        </li>
+<li class="flex items-center gap-3">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Houston, TX &amp; Alrededores
+        </li>
+</ul>
+<div class="mt-8 pt-8 border-t border-white/10 flex gap-6 text-xs uppercase tracking-widest font-medium">
+<a class="flex items-center gap-2" href="#"><span>Instagram</span></a>
+<a class="flex items-center gap-2" href="#"><span>Facebook</span></a>
+</div>
+</div>
+</section>
+<!-- END: Newsletter & Contact -->
+<!-- BEGIN: Footer -->
+<footer class="bg-brand-burgundy py-10 px-6 border-t border-white/5 text-center">
+<h2 class="font-serif text-xl italic text-brand-gold mb-6">Gabriela's Flowers</h2>
+<div class="flex justify-center gap-4 text-[10px] uppercase tracking-widest text-gray-400 mb-8">
+<span>WhatsApp</span>
+<span>Visa</span>
+<span>Mastercard</span>
+<span>PayPal</span>
+</div>
+<p class="text-[9px] text-gray-500 uppercase tracking-[0.2em]">© 2024 Gabriela's Flowers. Detalles que enamoran.</p>
+</footer>
+<!-- END: Footer -->
+</body></html>
