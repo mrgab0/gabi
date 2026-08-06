@@ -150,7 +150,7 @@ The shape language is **Soft (0.25rem)**. While the brand is organic, the UI ele
 - **Buttons:**
     - *Primary:* Forest Green background with Cream text. Sharp, professional, authoritative.
     - *Secondary:* Ghost style with Gold Accents border and text.
-- **Cards (Product):** Flat layout with no border; elevation is achieved through a change in background color (subtle Peony) or a very soft ambient shadow on hover.
+- **Cards (Product):** Flat layout with no border; elevatioen is achieved through a change in background color (subtle Peony) or a very soft ambient shadow on hover.
 - **Input Fields:** Bottom-border only ("Material style") to maintain the minimalist look, using Forest Green for the active state.
 - **Chips/Tags:** Used for flower types (e.g., "Lilies," "Seasonal"). Pill-shaped with a 1px Gold border and small-caps typography.
 - **Navigation:** A centered, minimal header. On scroll, it transitions to a frosted glass (Glassmorphism) bar.
